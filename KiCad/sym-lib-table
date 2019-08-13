@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name BTA08-600SWRG)(type Legacy)(uri G:/FILES/PROJECTS/MB/components/BTA08-600SWRG.lib)(options "")(descr ""))
   (lib (name SFH6156-3T)(type Legacy)(uri G:/FILES/PROJECTS/MB/components/SFH6156-3T.lib)(options "")(descr ""))
+  (lib (name Clever_Light-rescue)(type Legacy)(uri ${KIPRJMOD}/Clever_Light-rescue.lib)(options "")(descr ""))
 )

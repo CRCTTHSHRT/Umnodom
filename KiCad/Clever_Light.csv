@@ -1,0 +1,10 @@
+Позиция,Обозначение,Корпус,Значение,Количество,Есть
+1,"R6,R2",R_1206,10k,2,2
+2,"R5,R4",R_2512,360,2,2
+3,IC1,TO-220-3,BTA08-600SWRG,1,1
+4,R3,DIN0204_L3.6mm_D1.6mm,680,1,
+5,R1,DIN0204_L3.6mm_D1.6mm,2.2k,1,
+6,U1,DIP-6_W10.16mm,MOC3063M,1,
+7,Q1,SMDIP-4_W9.53mm,SFH6156-3T,1,
+8,J5,IDC-Header_2x07_P2.54mm_Vertical,Conn_02x07_Odd_Even,1,
+9,"J2,J1,J4,J3",TerminalBlock_Phoenix,Screw_Terminal_01x02,4,
