@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:Clever_Light-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -42,7 +42,7 @@ U 1 1 5D3AA1EC
 P 1500 1950
 F 0 "R3" V 1600 1950 50  0000 C CNN
 F 1 "680" V 1500 1950 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 1430 1950 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1430 1950 50  0001 C CNN
 F 3 "~" H 1500 1950 50  0001 C CNN
 	1    1500 1950
 	0    1    1    0   
@@ -53,7 +53,7 @@ U 1 1 5D3AA2C9
 P 1300 1000
 F 0 "R1" V 1400 1000 50  0000 C CNN
 F 1 "2.2k" V 1300 1000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 1230 1000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1230 1000 50  0001 C CNN
 F 3 "~" H 1300 1000 50  0001 C CNN
 	1    1300 1000
 	0    1    1    0   
@@ -64,7 +64,7 @@ U 1 1 5D3AAB8B
 P 3000 1000
 F 0 "R2" V 2900 1000 50  0000 C CNN
 F 1 "4.7k" V 3000 1000 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2930 1000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 2930 1000 50  0001 C CNN
 F 3 "~" H 3000 1000 50  0001 C CNN
 	1    3000 1000
 	0    1    1    0   
@@ -105,7 +105,7 @@ U 1 1 5D3A683B
 P 3650 2150
 F 0 "IC1" H 4100 1900 50  0000 C CNN
 F 1 "BTA08-600SWRG" H 4100 2300 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabUp" H 4400 2250 50  0001 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 4400 2250 50  0001 L CNN
 F 3 "https://componentsearchengine.com/Datasheets/1/BTA08-600SWRG.pdf" H 4400 2150 50  0001 L CNN
 F 4 "" H 4400 2050 50  0001 L CNN "Description"
 F 5 "4.6" H 4400 1950 50  0001 L CNN "Height"
@@ -196,7 +196,7 @@ U 1 1 5D3D9330
 P 7550 1050
 F 0 "J4" V 7800 1000 50  0000 C CNN
 F 1 "Screw_Terminal_01x02" V 7700 1000 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal" H 7550 1050 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_KV301_1x02_P5.00mm_Horizontal" H 7550 1050 50  0001 C CNN
 F 3 "~" H 7550 1050 50  0001 C CNN
 	1    7550 1050
 	0    -1   -1   0   
@@ -207,7 +207,7 @@ U 1 1 5D3D5C00
 P 6600 1050
 F 0 "J3" V 6850 1000 50  0000 C CNN
 F 1 "Screw_Terminal_01x02" V 6750 1000 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal" H 6600 1050 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_KV301_1x02_P5.00mm_Horizontal" H 6600 1050 50  0001 C CNN
 F 3 "~" H 6600 1050 50  0001 C CNN
 	1    6600 1050
 	0    -1   -1   0   
@@ -218,7 +218,7 @@ U 1 1 5D3D5396
 P 5650 1050
 F 0 "J2" V 5900 1000 50  0000 C CNN
 F 1 "Screw_Terminal_01x02" V 5800 1000 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal" H 5650 1050 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_KV301_1x02_P5.00mm_Horizontal" H 5650 1050 50  0001 C CNN
 F 3 "~" H 5650 1050 50  0001 C CNN
 	1    5650 1050
 	0    -1   -1   0   
@@ -229,7 +229,7 @@ U 1 1 5D3CCECA
 P 4700 1050
 F 0 "J1" V 4950 1000 50  0000 C CNN
 F 1 "Screw_Terminal_01x02" V 4850 1000 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal" H 4700 1050 50  0001 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_KV301_1x02_P5.00mm_Horizontal" H 4700 1050 50  0001 C CNN
 F 3 "~" H 4700 1050 50  0001 C CNN
 	1    4700 1050
 	0    -1   -1   0   
@@ -253,7 +253,7 @@ U 1 1 5D3E8DCB
 P 5750 2150
 F 0 "R6" H 5650 2150 50  0000 C CNN
 F 1 "4.7k" V 5750 2150 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 5680 2150 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 5680 2150 50  0001 C CNN
 F 3 "~" H 5750 2150 50  0001 C CNN
 	1    5750 2150
 	-1   0    0    1   
