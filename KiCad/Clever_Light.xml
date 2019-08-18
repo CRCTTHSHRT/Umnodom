@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>G:\FILES\PROJECTS\GIT\Clever_Light\KiCad\Clever_Light.sch</source>
-    <date>12.08.2019 10:29:50</date>
-    <tool>Eeschema (5.1.2)-2</tool>
+    <source>/home/chda/DEVELOP/electronic/kammerdiener/Clever_Light/KiCad/Clever_Light.sch</source>
+    <date>Сб 17 авг 2019 18:36:03</date>
+    <tool>Eeschema 5.1.4</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -37,7 +37,7 @@
     </comp>
     <comp ref="R3">
       <value>680</value>
-      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -45,7 +45,7 @@
     </comp>
     <comp ref="R1">
       <value>2.2k</value>
-      <footprint>Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal</footprint>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -53,7 +53,7 @@
     </comp>
     <comp ref="R2">
       <value>4.7k</value>
-      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -61,7 +61,7 @@
     </comp>
     <comp ref="IC1">
       <value>BTA08-600SWRG</value>
-      <footprint>Package_TO_SOT_THT:TO-220-3_Horizontal_TabUp</footprint>
+      <footprint>Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown</footprint>
       <datasheet>https://componentsearchengine.com/Datasheets/1/BTA08-600SWRG.pdf</datasheet>
       <fields>
         <field name="Height">4.6</field>
@@ -84,7 +84,7 @@
     </comp>
     <comp ref="J4">
       <value>Screw_Terminal_01x02</value>
-      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal</footprint>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_KV301_1x02_P5.00mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -92,7 +92,7 @@
     </comp>
     <comp ref="J3">
       <value>Screw_Terminal_01x02</value>
-      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal</footprint>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_KV301_1x02_P5.00mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -100,7 +100,7 @@
     </comp>
     <comp ref="J2">
       <value>Screw_Terminal_01x02</value>
-      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal</footprint>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_KV301_1x02_P5.00mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -108,7 +108,7 @@
     </comp>
     <comp ref="J1">
       <value>Screw_Terminal_01x02</value>
-      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-5.0-H_1x02_P5.00mm_Horizontal</footprint>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_KV301_1x02_P5.00mm_Horizontal</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <sheetpath names="/" tstamps="/"/>
@@ -116,7 +116,7 @@
     </comp>
     <comp ref="R6">
       <value>4.7k</value>
-      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <footprint>Resistor_SMD:R_1206_3216Metric</footprint>
       <datasheet>~</datasheet>
       <libsource lib="Device" part="R" description="Resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -290,19 +290,19 @@
   </libparts>
   <libraries>
     <library logical="Clever_Light-rescue">
-      <uri>G:\FILES\PROJECTS\GIT\Clever_Light\KiCad/Clever_Light-rescue.lib</uri>
+      <uri>/home/chda/DEVELOP/electronic/kammerdiener/Clever_Light/KiCad/Clever_Light-rescue.lib</uri>
     </library>
     <library logical="Connector">
-      <uri>G:\Programs\KiCad\share\kicad\library/Connector.lib</uri>
+      <uri>/usr/share/kicad/library/Connector.lib</uri>
     </library>
     <library logical="Connector_Generic">
-      <uri>G:\Programs\KiCad\share\kicad\library/Connector_Generic.lib</uri>
+      <uri>/usr/share/kicad/library/Connector_Generic.lib</uri>
     </library>
     <library logical="Device">
-      <uri>G:\Programs\KiCad\share\kicad\library/Device.lib</uri>
+      <uri>/usr/share/kicad/library/Device.lib</uri>
     </library>
     <library logical="Relay_SolidState">
-      <uri>G:\Programs\KiCad\share\kicad\library/Relay_SolidState.lib</uri>
+      <uri>/usr/share/kicad/library/Relay_SolidState.lib</uri>
     </library>
   </libraries>
   <nets>
