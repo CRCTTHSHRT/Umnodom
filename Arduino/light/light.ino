@@ -7,6 +7,11 @@
 
 */
 
+#include <avr/wdt.h>
+
+// устанавливаем таймер watchdog timeout
+#define WDTO_DEFAULT WDTO_4S
+
 // пин с кнопкой, подтянут вниз
 #define BUTTON_PIN 3
 // пин on на материнке
@@ -37,7 +42,7 @@ const unsigned long int longPressTime = 1500;
 // весь диапазон пройдёт за (maxBrightnessLevel-minBrightnessLevel)*brightnessChangeTickTime мс
 const unsigned long int brightnessChangeTickTime = 5;
 // Задержка между изменением уставки яркости
-const unsigned long int brightnessSetTickTime = 10;
+const unsigned long int brightnessSetTickTime = 20;
 
 // если 1, то сигнал на входе не соответствует логическому состоянию кнопки
 volatile boolean difference = FALSE;
@@ -71,12 +76,16 @@ unsigned char ledBrightness = minBrightnessLevel;
 unsigned char outputLevel = minBrightnessLevel;
 
 void setup() {
+    wdt_reset();
     pinMode(BUTTON_PIN, INPUT);
     pinMode(ON_PIN, OUTPUT);
     attachInterrupt( digitalPinToInterrupt( BUTTON_PIN ), button_edge_detected, CHANGE);
+    wdt_enable(WDTO_DEFAULT);
 }
 
 void loop() {
+
+    wdt_reset();
 
     // управление светильником
     if ( millis() - lastStepTime >= brightnessChangeTickTime ) {
@@ -115,11 +124,11 @@ void loop() {
                 ledState = ON;
                 ledBrightness = savedLedBrightness;
             }
-            if ( ( millis() - lastTickTime ) >= brightnessChangeTickTime ) {
+            if ( ( millis() - lastTickTime ) >= brightnessSetTickTime ) {
                 if ( brightnessAction == INCREASE) {
-                    if ( ledBrightness < maxBrightnessLevel ) ++ledBrightness;
+                    if ( ledBrightness < maxBrightnessLevel ) ledBrightness++;
                 } else {
-                    if ( ledBrightness > minBrightnessLevel ) --ledBrightness;
+                    if ( ledBrightness > minBrightnessLevel+1 ) ledBrightness--;
                 }
                 lastTickTime = millis();
             }
