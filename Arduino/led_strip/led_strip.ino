@@ -52,7 +52,7 @@ volatile boolean difference = FALSE;
 // момент последнего прерывания
 volatile unsigned long int edgeTime = 0;
 // логическое состояние кнопки
-boolean buttonState = ON;
+boolean buttonState = OFF;
 
 // Флаги необработанного нажатия и отпускания
 boolean pressedFlag = OFF;
@@ -115,12 +115,12 @@ void loop() {
             difference = FALSE;
             if ( buttonState ) {
                 pressTime = millis();
-                pressedFlag = OFF;
-                releasedFlag = ON;
-            } else {
-                releaseTime = millis();
                 pressedFlag = ON;
                 releasedFlag = OFF;
+            } else {
+                releaseTime = millis();
+                pressedFlag = OFF;
+                releasedFlag = ON;
             }
         }
     }
@@ -174,7 +174,7 @@ void loop() {
 // обработка еджа на входе
 void button_edge_detected() {
 
-    if ( buttonState == digitalRead( BUTTON_PIN ) ) {
+    if ( buttonState != digitalRead( BUTTON_PIN ) ) {
         difference = FALSE;
     } else {
         difference = TRUE;
