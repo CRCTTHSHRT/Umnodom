@@ -52,7 +52,7 @@ volatile boolean difference = FALSE;
 // момент последнего прерывания
 volatile unsigned long int edgeTime = 0;
 // логическое состояние кнопки
-boolean buttonState = OFF;
+boolean buttonState = ON;
 
 // Флаги необработанного нажатия и отпускания
 boolean pressedFlag = OFF;
@@ -80,13 +80,12 @@ unsigned char outputLevel = minBrightnessLevel;
 
 void setup() {
     wdt_reset();
-    pinMode(BUTTON_PIN, INPUT);
+    pinMode(BUTTON_PIN, INPUT_PULLUP);
     FastLED.addLeds<NEOPIXEL, 10>(leds[0], NUM_LEDS_PER_STRIP);
     FastLED.addLeds<NEOPIXEL, 11>(leds[1], NUM_LEDS_PER_STRIP);
     FastLED.addLeds<NEOPIXEL, 12>(leds[2], NUM_LEDS_PER_STRIP);
     attachInterrupt( digitalPinToInterrupt( BUTTON_PIN ), button_edge_detected, CHANGE);
     wdt_enable(WDTO_DEFAULT);
-    Serial.begin(9600);
 }
 
 void loop() {
@@ -107,7 +106,6 @@ void loop() {
           }
         }
         FastLED.show();
-        Serial.println(outputLevel);
     }
     
     // устранение шума от контакта кнопки
@@ -117,12 +115,12 @@ void loop() {
             difference = FALSE;
             if ( buttonState ) {
                 pressTime = millis();
-                pressedFlag = ON;
-                releasedFlag = OFF;
-            } else {
-                releaseTime = millis();
                 pressedFlag = OFF;
                 releasedFlag = ON;
+            } else {
+                releaseTime = millis();
+                pressedFlag = ON;
+                releasedFlag = OFF;
             }
         }
     }
