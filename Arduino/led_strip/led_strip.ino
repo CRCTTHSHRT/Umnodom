@@ -30,7 +30,7 @@
 
 CRGB leds[NUM_STRIPS][NUM_LEDS_PER_STRIP];
 
-const int STRIP_PIN[3] = {10, 11, 12};
+//const int STRIP_PIN[3] = {10, 11, 12};
 
 // Граничные значения яркости
 const unsigned char minBrightnessLevel = 0;
@@ -81,9 +81,9 @@ unsigned char outputLevel = minBrightnessLevel;
 void setup() {
     wdt_reset();
     pinMode(BUTTON_PIN, INPUT_PULLUP);
-    FastLED.addLeds<NEOPIXEL, 10>(leds[0], NUM_LEDS_PER_STRIP);
-    FastLED.addLeds<NEOPIXEL, 11>(leds[1], NUM_LEDS_PER_STRIP);
-    FastLED.addLeds<NEOPIXEL, 12>(leds[2], NUM_LEDS_PER_STRIP);
+    FastLED.addLeds<NEOPIXEL, 4>(leds[0], NUM_LEDS_PER_STRIP);
+    FastLED.addLeds<NEOPIXEL, 5>(leds[1], NUM_LEDS_PER_STRIP);
+    FastLED.addLeds<NEOPIXEL, 6>(leds[2], NUM_LEDS_PER_STRIP);
     attachInterrupt( digitalPinToInterrupt( BUTTON_PIN ), button_edge_detected, CHANGE);
     wdt_enable(WDTO_DEFAULT);
 }
